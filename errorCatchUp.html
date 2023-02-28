@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            console.log('person1:shows ticket');
+            console.log('person2:shows ticket');
+
+            const preMovie = async () =>{
+                const promiseWifeBringsTickets = new Promise((resolve,reject)=>{
+                    setTimeout(()=>reject(`ticket`),3000);
+                });
+  
+                
+                let ticket; //u cannot use let twice thats why we declare let here later we can use it
+                try{ //suppose wife comes 1 hour later to theoter so husband knows that he cannot watch movie so his face becomes sad
+                    ticket = await promiseWifeBringsTickets; 
+                    }catch(e){
+                        ticket = 'sad face';
+                    }
+                
+                
+                
+                return ticket;
+
+            }
+            preMovie().then((m)=>console.log(`person3:shows ${m}`)); //`${}` this means string interpolation
+            console.log('person4:shows ticket');
+            console.log('persong5:shows ticket');
+
+        </script>
+    </body>
+</html>

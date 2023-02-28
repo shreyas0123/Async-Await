@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            async function dadpromise(){
+            const dadaMakePromise = await new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                salaryCredited = true;
+                salary = 10000;
+                costofps5 = 30000;
+        
+            if(salaryCredited === true && salary> costofps5){
+                resolve('Buy him a ps5')
+            }else{
+                reject('sorry son:wil buy it later for sure')
+            }
+            },3000)
+            })
+            console.log(dadaMakePromise)
+    
+            }
+            dadpromise();
+        </script>
+    </body>
+</html>
